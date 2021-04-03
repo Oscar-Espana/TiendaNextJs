@@ -1,5 +1,6 @@
 import Layout from '@components/Layout/Layout'
 import {AppProps} from 'next/app'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function MyApp({ Component, pageProps }:AppProps) {
 
