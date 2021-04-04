@@ -1,18 +1,15 @@
 import React from 'react'
 import Navbar from '@components/Navbar/Navbar'
+import Container from 'react-bootstrap/Container'
 
 const Layout:React.FC = ({children}) => {
     return (
         <div>
             <Navbar/>
+            <Container fluid="md">
             {children}
-            <footer className="container" >Mi footer</footer>
-            <style jsx>{`
-                .container{
-                    background:salmon;
-                }
-            `}
-            </style>
+            </Container>
+            <footer>Mi footer</footer>
         </div>
     )
 }
