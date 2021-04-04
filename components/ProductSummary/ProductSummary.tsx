@@ -8,21 +8,19 @@ type ProductSummaryProps = {
 
 const ProductSummary = ({product}: ProductSummaryProps) => {
     return (
-        <div>
+        <section>
             <Row>
-              <Col xs={12} md={6}>
+              <Col xs={12} md={6} className="d-flex flex-column align-items-center align-items-md-start">
               <img src={product.image} alt={product.name} />
               </Col> 
-              <Col xs={12} md={6} className="d-flex flex-column justify-content-center">
+              <Col xs={12} md={6} className="d-flex flex-column justify-content-center align-items-center align-items-md-start">
                   <h1>{product.name}</h1>
-                  <p>${product.price}</p>
+                  <h3 className="text-primary font-weight-bold py-2" >${product.price}</h3>
                   <label>SKU: <b>{product.sku}</b></label>
               </Col>  
             </Row>
             <ProductAttributes {...product} />
-
-
-        </div>
+        </section>
     )
 }
 

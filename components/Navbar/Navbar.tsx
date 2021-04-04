@@ -11,7 +11,7 @@ const CustomNavbar = () => {
         <Link href="/">
           <a>
             <Avocado/>
-            Aguacates Store
+            Avo Store
           </a>
         </Link>
       </Navbar.Brand>

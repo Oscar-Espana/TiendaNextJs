@@ -22,11 +22,11 @@ const Home = () => {
       {
         productList.map( (product, key)=>(
           <Col xs={12} md={6} lg={4} key={key} className="d-flex justify-content-center">
-            <Card className="mb-4" style={{ width: '18rem' }}>
+            <Card className="mb-4" style={{ width: '18rem' }} >
               <Card.Img variant="top" src={product.image} />
-              <Card.Body>
-                <Card.Title>{product.name}</Card.Title>
-                <Card.Text>
+              <Card.Body className="d-flex flex-column justify-content-center">
+                <Card.Title className="text-center">{product.name}</Card.Title>
+                <Card.Text className="text-center h4 font-weight-bold text-primary py-1" >
                   ${product.price}
                 </Card.Text>
                 <Link href={`/product/${product.id}`}>
@@ -38,7 +38,6 @@ const Home = () => {
         ))
       }
       </Row>
-      
     </div>
   );
 };
