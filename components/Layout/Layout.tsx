@@ -4,13 +4,13 @@ import Container from 'react-bootstrap/Container'
 
 const Layout:React.FC = ({children}) => {
     return (
-        <div>
+        <>
             <Navbar/>
-            <Container fluid="md">
+            <Container fluid="md" className="py-5" >
             {children}
             </Container>
             <footer>Mi footer</footer>
-        </div>
+        </>
     )
 }
 
