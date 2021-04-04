@@ -10,14 +10,14 @@ const Home = () => {
     window
     .fetch('api/avo')
     .then(response => response.json())
-    .then(({data, length}) =>{
+    .then(({data}) =>{
       setProductList(data)
     })
   }, [])
 
   return (
     <div>
-      <h1>Hola Mundo</h1>
+      <h1 className="text-center mb-5" >Todos los productos</h1>
       <Row>
       {
         productList.map( (product, key)=>(
