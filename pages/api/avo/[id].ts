@@ -6,7 +6,7 @@ const allAvos = async (request: NextApiRequest , response: NextApiResponse) => {
     const id=request.query.id
 
     const avo= await db.getById(id as string )
-    response.status(200).json({data:avo})
+    response.status(200).json(avo)
 }
 
 export default allAvos
