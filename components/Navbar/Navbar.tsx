@@ -1,19 +1,22 @@
-import React from "react";
-import Link from "next/link";
+import React from 'react'
+import Link from 'next/link'
+import Navbar from 'react-bootstrap/Navbar'
+import Avocado from '@components/SVGIcons/Avocado'
 
-const Navbar = () => {
+
+const CustomNavbar = () => {
   return (
-    <nav>
-      <menu>
+    <Navbar bg="dark" variant="dark">
+      <Navbar.Brand>
         <Link href="/">
-          <a>Home</a>
+          <a>
+            <Avocado/>
+            Aguacates Store
+          </a>
         </Link>
-        <Link href="/about">
-          <a>About</a>
-        </Link>
-      </menu>
-    </nav>
-  );
-};
+      </Navbar.Brand>
+    </Navbar>
+  )
+}
 
-export default Navbar;
+export default CustomNavbar
