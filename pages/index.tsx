@@ -32,7 +32,7 @@ const Home = ({productList}:{productList:TProduct[]}) => {
                 <Card.Text className="text-center h4 font-weight-bold text-primary py-1" >
                   ${product.price}
                 </Card.Text>
-                <Link href={`/product/${product.id}`}>
+                <Link href={`/producto/${product.id}`}>
                   <Button as='a' variant="primary">Seleccionar</Button>
                 </Link>
               </Card.Body>
