@@ -3,7 +3,7 @@ import fetch from 'isomorphic-unfetch'
 import {Row, Col, Card, Button} from 'react-bootstrap'
 import Link from 'next/link'
 
-export const getServerSideProps= async()=>{
+export const getStaticProps= async()=>{
   
   const response = await fetch('https://catalogo-productos.vercel.app/api/avo')
   const {data:productList}: TAPIAvoResponse = await response.json()
