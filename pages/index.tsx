@@ -1,19 +1,21 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react"
+import fetch from 'isomorphic-unfetch'
 import {Row, Col, Card, Button} from 'react-bootstrap'
 import Link from 'next/link'
 
-const Home = () => {
+export const getServerSideProps= async()=>{
+  
+  const response = await fetch('https://catalogo-productos.vercel.app/api/avo')
+  const {data:productList}: TAPIAvoResponse = await response.json()
 
-  const [productList, setProductList] = useState <TProduct[]>([])
+  return {
+    props:{
+      productList
+    }
+  }
+}
 
-  useEffect(() => {
-    window
-    .fetch('api/avo')
-    .then(response => response.json())
-    .then(({data}) =>{
-      setProductList(data)
-    })
-  }, [])
+const Home = ({productList}:{productList:TProduct[]}) => {
 
   return (
     <div>
